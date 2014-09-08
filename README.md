@@ -10,7 +10,9 @@ CloudTunes provides a unified interface
 for music stored in the cloud (YouTube, Dropbox, etc.) and integrates with 
 [Last.fm](http://www.last.fm/api), Facebook, 
 and [Musicbrainz](https://musicbrainz.org/) for metadata, discovery, 
-and social experience. It is similar to services like Spotify, except instead of your local tracks and the fixed Spotify catalog, it works with your music in Dropbox and music videos on YouTube.
+and social experience. It is similar to services like Spotify, 
+except instead of local tracks and the fixed Spotify catalog, 
+CloudTunes uses your files stored in Dropbox and music videos on YouTube.
 
 
 ![screenshot](screenshots/Explore.png)
@@ -24,7 +26,7 @@ CloudTunes is a side project of
 [@jakubroztocil](https://twitter.com/jakubroztocil) who is a bit of a 
 [music nerd](http://last.fm/user/oswaldcz) and who likes to 
 [build stuff](https://github.com/jakubroztocil).  In 2012 he decided 
-to make an iTunes-like webapp to **make music stored all over the cloud 
+to create an iTunes-like webapp to **make music stored all over the cloud 
 easily discoverable and accessible:** hence *CloudTunes*. 
 
 One of the goals was to experiment with a bunch of new technologies as well.
