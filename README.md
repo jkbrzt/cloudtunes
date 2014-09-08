@@ -127,4 +127,4 @@ Clone this repo and follow instructions in:
 
 ## Licence
 
-BSD. See [LICENCE](licence) for more details.
+BSD. See [LICENCE](LICENCE) for more details.
