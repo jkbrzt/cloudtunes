@@ -128,3 +128,11 @@ Clone this repo and follow instructions in:
 ## Licence
 
 BSD. See [LICENCE](LICENCE) for more details.
+
+
+## Contact 
+
+Jakub Roztočil
+
+* http://github.com/jakubroztocil
+* http://twitter.com/jakubroztocil
