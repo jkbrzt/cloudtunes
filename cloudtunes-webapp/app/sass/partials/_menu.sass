@@ -1,0 +1,40 @@
+@import 'compass/css3/transition'
+@import '../variables'
+
+#menu
+  position: absolute
+  width: 150px
+  background: lighten($base-color, 30%)
+  font-size: 12px
+  border: 2px solid lighten($border-color, 20%)
+  z-index: 999999999999
+  opacity: 0
+  +single-transition(opacity, .3s)
+  border-radius: 4px
+
+  &.open
+    opacity: 1
+
+  .pointer
+    display: inline-block
+    position: absolute
+    top: -7px
+    left: 65px
+    width: 0
+    height: 0
+    border-bottom: 7px solid lighten($border-color, 20%)
+    border-left: 7px solid transparent
+    border-right: 7px solid transparent
+
+  .item
+    cursor: pointer
+    display: block
+    padding: .5em
+    border-bottom: 1px solid lighten($border-color, 40%)
+
+    &:hover
+      background: $focused-item
+      color: #fff
+
+    &:last-child
+      border-bottom: none

@@ -1,0 +1,68 @@
+@import '../variables'
+@import 'compass/css3/transition'
+
+
+#search
+
+  padding-top: 50px
+  font-size: 14px
+  position: absolute
+  left: 10px
+  top: 0
+  text-align: left
+
+  input
+    //height: $header_height - 10
+    border: 1px solid $border-color
+    padding: 2px 4px
+    border-radius: 2px
+    +transition-property(width)
+    +transition-duration(.2s)
+    width: 600px
+    font-size: 2em
+
+  //&.active input
+
+  .suggest
+    position: absolute
+    //top: $header_height - 5
+    background: lighten($base-color, 40%)
+    width: 600px
+    border: 1px solid $border-color
+    z-index: 999999999
+
+    &, h2, h1
+      line-height: 1.3
+      font-size: 14px
+
+    ul, li, h2, h1
+      padding: 0
+      margin: 0
+      list-style: none
+      display: block
+
+    h1
+      background: $base-color
+      padding: 2px
+
+    h2
+      font-weight: normal
+      float: left
+      width: 60px
+      padding: 2px
+
+    li
+      cursor: pointer
+      padding: 2px 2px 2px 60px
+
+      .note
+        color: lighten($color, 30%)
+        font-size: .9em
+
+      &.selected  // The class is assigned also on hover.
+        background: lighten($base-color, 10%)
+        background: $focused-item
+
+    .show-all
+      font-weight: bold
+

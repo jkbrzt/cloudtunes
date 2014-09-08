@@ -1,0 +1,28 @@
+<section class="{{id}}">
+
+    <h1>{{name}}</h1>
+
+    {{#each sections}}
+        <section class="{{id}}">
+
+            <h2>{{name}}</h2>
+
+            <ul>
+                {{#each items}}
+                    <li data-item="{{id}}" data-type="{{../type}}" class="item">
+                        {{{text}}}
+                        {{#if note}}
+                            <div class="note">{{note}}</div>
+                        {{/if}}
+                    </li>
+                {{/each}}
+            </ul>
+
+        </section>
+    {{/each}}
+
+    <ul>
+        <li class="item show-all">{{showAllLabel}}</li>
+    </ul>
+
+</section>

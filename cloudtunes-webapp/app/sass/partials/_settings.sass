@@ -1,0 +1,77 @@
+@import '../variables'
+
+
+#settings
+
+  form
+
+    label[for], .label
+      width:  7em
+      display: inline-block
+
+    .submit
+      padding-left: 7em
+
+    input:not([type=checkbox]), button
+      font-size: 1.1em
+      width:  20em
+      border: 1px solid $border-color
+      padding:  .2em
+      color:  $color
+
+    .button
+      display: inline-block
+      background: $base-color
+      padding: 5px
+      cursor: pointer
+
+  form p, section.social article
+    padding:  10px
+    margin: 0 0 10px
+
+  section.social
+
+    article
+      background: lighten($base-color, 12%)
+      h4, p
+        display: inline-block
+        margin: 0
+        font-size: 1em
+
+      h4
+        margin-right: 20px
+        font-weight: normal
+
+      img
+        width: 20px
+        height: 20px
+        vertical-align: middle
+
+      .username, h4
+        vertical-align: middle
+        background: lighten($base-color, 20%)
+        line-height: 20px
+        display: inline-block
+        padding-right: 5px
+        padding-left: 5px
+
+      a.username
+        padding-left: 0
+
+  section.profile
+
+    .picture
+
+      img
+        cursor: pointer
+        width: 50px
+        height: 50px
+        vertical-align: top
+        margin-right: 10px
+        border: 3px solid lighten($border-color, 35%)
+
+        &:hover
+          border-color: lighten($border-color, 10%)
+
+        &.selected
+          border: 3px solid $color2

@@ -1,0 +1,156 @@
+@import 'compass/css3/transition'
+@import 'compass/css3/images'
+@import '../variables'
+
+
+
+#player
+  position: relative
+
+  .buttons
+    position: relative
+
+    .playback
+      text-align: center
+      position: relative
+      z-index: 2
+      margin: 0 50px
+
+    .settings
+      position: absolute
+      right: 0
+      top: 0
+      left: 0
+      font-size: 12px
+      z-index: 1
+      text-align: right
+
+      &:hover
+
+        z-index: 100
+
+      .volume-widget
+        display: inline-block
+
+        > .button
+          z-index: 20
+          position: relative
+
+        .volume-popup
+          background: lime
+          opacity: 0
+          +single-transition(opacity, .3s)
+          position: absolute
+          top: -17px
+          left: 0
+          width: 100%
+          padding: 21px 15px
+          background: lighten($base-color, 10%)
+
+          .slider
+            margin-right: 15px
+
+          .button
+            position: absolute
+            right: 0
+            top: 17px
+
+        &.open .volume-popup
+          opacity: 1
+
+        &.closed .volume-popup
+          left: 999px
+
+
+    .button
+      cursor: pointer
+      vertical-align: middle
+      display: inline-block
+      opacity: .9
+      text-align: center
+      color: $color
+      line-height: 15px
+      font-size: 15px
+      width: 20px
+      height: 20px
+      line: 0
+
+      &:hover
+        opacity: 1
+
+      &.inactive
+        opacity: .5 !important
+
+  .slider
+    position: relative
+    cursor: pointer
+    background: darken($base-color, 10%)
+
+    .elapsed, .loaded
+      position: absolute
+      position: absolute
+      height: 100%
+      left: 0
+      top: 0
+      background: darken($base-color, 60%)
+
+    .loaded
+      background: darken($base-color, 20%)
+      +transition-property(width)
+      +transition-duration(.2s)
+      width: 0
+
+    .pos
+      position: absolute
+      left: 20px
+      border-radius: 8px
+      background: $base-color
+      +single-transition(width, 1s)
+
+    &.volume
+      height: 8px
+
+      &, .elapsed
+        border-radius: 5px
+
+      .pos
+        top: -4px
+        height: 17px
+        width: 17px
+
+    &.position
+      height: 6px
+      margin-bottom: 10px
+
+      .pos
+        top: -3px
+        height: 12px
+        width: 12px
+        background: darken($base-color, 40%)
+        visibility: hidden
+
+      &:hover
+        .pos
+          visibility: visible
+
+  .track
+    margin-top: 15px
+    position: relative
+    line-height: normal
+    font-size:  12px
+    position:  relative
+    text-align: center
+
+    span
+
+      cursor: pointer
+
+      &:hover
+        color: #000
+
+    .title
+      display: block
+      font-weight: bold
+      font-size: 1.2em
+
+

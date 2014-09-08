@@ -1,0 +1,42 @@
+@import '../variables'
+
+
+.dialog.modal
+  z-index: 99999
+  position:  fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  background: rgba(0, 0, 0, .8)
+  cursor: pointer
+
+  .body
+    cursor: default
+    position: absolute
+    width:  400px
+    height:  160px
+    background:  $base-color
+    top:  50%
+    margin-top: -180px
+    left:  50%
+    margin-left: -200px
+    border-radius: 5px
+    text-align: center
+
+    h2
+      font-weight: normal
+
+    input, button
+      width: 90%
+      font-size:  1.2em
+      margin-bottom: 5px
+
+  &.settings
+
+    .body
+      width: 80%
+      height: 80%
+      margin-top: -40%
+      margin-left: -40%
+

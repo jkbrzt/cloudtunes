@@ -1,0 +1,45 @@
+<article class="dropbox">
+    <h4>Dropbox</h4>
+        <p>
+            {{#if dropbox}}
+                Connected as <span class="username">{{dropbox.username}}</span>
+                <a href="/auth/dropbox" target="_blank" class="remove">Remove</a>
+            {{else}}
+                <a href="/auth/dropbox?popup=1" target="_blank" class="connect">Connect</a>
+            {{/if}}
+        </p>
+</article>
+
+
+<article class="facebook">
+    <h4>Facebook</h4>
+        <p>
+            {{#if facebook}}
+                Connected as
+                <a href="{{facebook.url}}" target="_blank" class="username">
+                    <img src="{{facebook.picture}}" />
+                    {{facebook.username}}
+                </a>
+                <a href="/auth/facebook" target="_blank" class="remove">Remove</a>
+            {{else}}
+                <a href="/auth/facebook?popup=1" target="_blank" class="connect">Connect</a>
+            {{/if}}
+        </p>
+</article>
+
+
+<article class="lastfm">
+    <h4>Lastfm</h4>
+        <p>
+            {{#if lastfm}}
+            Connected as
+                <a href="{{lastfm.url}}" target="_blank" class="username">
+                    <img src="{{lastfm.picture}}" />
+                    {{lastfm.username}}
+                </a>
+                <a href="/auth/lastfm" target="_blank" class="remove">Remove</a>
+            {{else}}
+                <a href="/auth/lastfm/popup" target="_blank" class="connect">Connect</a>
+            {{/if}}
+        </p>
+</article>

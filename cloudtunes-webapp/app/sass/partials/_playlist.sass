@@ -1,0 +1,196 @@
+@import '../variables'
+@import 'compass/css3/images'
+@import 'compass/css3/border-radius'
+@import 'compass/css3/transition'
+
+
+$groups_height: 50%
+$tracks_height: 50%
+$item_height: 25px  // hard-coded also in lazy_renderer.coffee
+$font_size: 12px
+$playlist_header_height: 40px
+
+$icon-sort-by-alphabet: "\f15d"
+$icon-sort-by-alphabet-alt: "\f15e"
+$icon-sort-by-order: "\f162"
+$icon-sort-by-order: "\f162"
+$icon-sort-by-order-alt: "\f163"
+
+
+#playlist
+
+  font:  #{$font_size}/#{$item_height} 'Lucida Grande', 'Helvetica Neue', Calibri, sans-serif
+
+  &, .playlist-body
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+  &.has-header
+    .playlist-body
+      top: $playlist_header_height
+
+  .playlist-header
+    background: lighten($base-color, 5%)
+    border-bottom: 1px solid $border-color
+    height: $playlist_header_height
+    padding-left:  15px
+
+    h2
+      font-weight: bold
+      margin: 0
+      line-height: $playlist_header_height
+      font-size: 1.3em
+      color:  lighten($color, 10%)
+      margin-right: 2em
+      display: inline-block
+
+    .options
+      float: right
+      margin-right: 1em
+      display: inline-block
+      height: $playlist_header_height
+      line-height: $playlist_header_height
+      font-size: 15px
+      color:  lighten($color, 25%)
+      cursor: pointer
+      +single-transition(color, .3s)
+
+      &:hover
+        color:  lighten($color, 10%)
+
+  // Resizers
+  //==================================================
+
+  // Main grid resize.
+  .resize-col.resize-main-grid
+    left: 50%
+    z-index: 1  // Is bellow tracks unless .active.
+
+  .resize-row.resize-main-grid
+    top: $groups_height
+    z-index: 3
+
+  // Tracks columns
+  .tracks .resize-col
+    z-index: 15
+    width:  3px
+    margin-left: -2px
+
+
+  // Lists
+  //==================================================
+  .flat-playlist-body .tracks
+    height: 100% !important
+    border-top: none !important
+
+    .item.draghover
+
+      &.drop-above td
+        border-top: solid $focused-item 2px !important
+
+      &.drop-bellow td
+        border-bottom: solid $focused-item 2px !important
+
+  .list
+    position: relative
+
+    .body
+      overflow: auto
+      position: absolute
+      top:  $item_height + 1px
+      bottom:  0 !important
+      left:  0
+      right:  0
+
+    &.artists, &.albums
+      width: 50%
+      height: $groups_height
+      float: left
+
+      h2
+        text-transform: uppercase
+        margin: 0
+        padding: 0 10px
+        font-size: .8em
+        font-weight: normal
+        text-align: center
+        background: $base-color
+        +background-image(linear-gradient(lighten($base-color, 20%), lighten($base-color, 5%)))
+        border-bottom: 1px solid $border-color
+
+    &.artists
+      border-right: 1px solid $border-color
+
+    &.tracks
+      height: $tracks_height
+      position:  relative
+      clear: both
+      border-top: 1px solid $border-color
+      z-index: 2
+
+      .head-wrap
+        position:  relative
+
+      .body
+        bottom: 2px  // to compensate border-top
+
+        table td:nth-child(1)
+          color: lighten($color, 50%)
+
+      table
+        width: 100%
+        table-layout: fixed
+        border-collapse: collapse
+
+      tr.playing td:first-child:before
+        content: "\f028" // .icon-volume-up
+        font-family: FontAwesome
+        padding-left:  2px
+        float: left
+        height:  $font_size
+        width:  $font_size
+        line-height: $font_size
+        text-align: center
+        text-indent: 0
+        padding-top: 7px
+        top: 0
+
+      td
+        padding: 0
+        text-indent: 16px
+
+        &:nth-child(1)
+          text-align: right
+          text-indent: 0
+
+      tr:nth-child(even)
+        background: lighten($base-color, 10%)
+
+      table.head
+        td
+          text-transform: uppercase
+          font-size: .8em
+          +background-image(linear-gradient(lighten($base-color, 20%), lighten($base-color, 10%)))
+          border-right: 1px solid lighten($border-color, 20%)
+          border-bottom: 1px solid lighten($border-color, 20%)
+
+          &:last-child
+            border-right: none
+
+        &.sorting-enabled td
+          cursor: pointer
+
+          &:hover
+            background: darken($base-color, 10%)
+
+        .sorted-by:after
+          content: '▲'
+          margin-left: 10px
+          font-size:  8px
+
+        &.order-desc
+          .sorted-by:after
+            content: '▼'

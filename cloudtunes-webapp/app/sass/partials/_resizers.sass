@@ -1,0 +1,25 @@
+@import '../variables'
+
+.resize-row, .resize-col
+  background: darken($base-color, 70%)
+  opacity: 0
+  position: absolute
+  z-index: 99999999
+
+  &.active
+    opacity: .3
+    z-index: 10 !important
+
+.resize-row
+  cursor: row-resize
+  height: 5px
+  left: 0
+  right: 0
+
+.resize-col
+  cursor: col-resize
+  top: 0
+  bottom: 0
+  width: 6px
+  margin-left: -3px
+

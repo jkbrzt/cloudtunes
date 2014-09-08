@@ -1,0 +1,59 @@
+@import '../variables'
+
+
+// Items are in a table (tracks) or in div.item (artists, albums)
+
+.playable-list
+
+  font:  #{$playable_item_font_size}/#{$playable_item_height} 'Lucida Grande', 'Helvetica Neue', Calibri, sans-serif
+  cursor: default
+  -webkit-overflow-scrolling: touch
+
+  .item.selected, .item.selected td
+    background: $base-color
+    color: #fff !important
+
+  &.focuscontext:not(.focused)
+    .item.selected,
+    .item.selected td
+      background: $base-color
+      color: $color !important
+
+  div.item, td
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+    height: $playable_item_height
+    line-height: $playable_item_height
+
+  .item
+    padding-left:  10px
+    padding-right: 10px
+
+  tr
+    &.playing td:first-child:before
+      content: "\f028" // .icon-volume-up
+      font-family: FontAwesome
+      padding-left:  2px
+      float: left
+      height:  $playable_item_font_size
+      width:  $playable_item_font_size
+      line-height: $playable_item_font_size
+      text-align: center
+      text-indent: 0
+      padding-top: 7px
+      top: 0
+
+  tbody
+    td
+      padding: 0
+      text-indent: 16px
+
+      &:nth-child(1)
+        text-align: right
+        text-indent: 0
+        color: lighten($color, 50%)
+
+    tr
+      &:nth-child(even)
+        background: lighten($base-color, 10%)

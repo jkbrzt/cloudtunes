@@ -1,0 +1,6 @@
+*.rdb
+*.egg*
+cloudtunes/settings/local.py
+
+cloudtunes/settings/production.py
+cloudtunes/settings/development.py

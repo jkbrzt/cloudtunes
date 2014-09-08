@@ -1,0 +1,9 @@
+<ul class="artist-list">
+    {{#each artists}}
+        <li>
+            <a href="/artist/{{id}}" style="background-image: url('{{images.extralarge}}')">
+                <span class="name"><span>{{name}}</span></span>
+            </a>
+        </li>
+    {{/each}}
+</ul>

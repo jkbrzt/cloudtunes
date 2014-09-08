@@ -1,0 +1,199 @@
+<!doctype html>
+<meta charset="UTF-8"/>
+<title>CloudTunes</title>
+<style>
+html {
+    font: 13px/1.4 sans-serif;
+    background: #EEE url("homepage/subtle_surface.png");
+    color: #353535;
+}
+body {
+    max-width: 875px;
+    margin: 1em auto;
+    padding-bottom: 50px;
+}
+img {
+    max-width: 100%;
+    text-decoration: none;
+    border: none
+}
+h1 {
+    color: #B33;
+    margin: 0;
+    text-transform: lowercase;
+    font-weight: normal;
+    font-size: 7.8em;
+    text-align: center;
+    position: relative;
+}
+h1:after {
+    content: 'alpha';
+    font-size: .2em;
+    position: absolute;
+    top: 1em;
+    margin-left: -1em;
+    opacity: .9;
+    color: #353535;
+}
+.tagline {
+    margin: 0;
+    font-size: 1.3em;
+    text-align: center;
+}
+.tagline span {
+    font-weight: bold;
+}
+.visual {
+    margin: 20px 0;
+}
+a {
+    color: #6f9aff;
+}
+a:hover {
+    color: #4a89ff;
+}
+.start {
+    font-size: 17px;
+    color: #fff !important;
+    background: #6f9aff;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 4px;
+    width: 12em;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+}
+.start:hover {
+    background: #4a89ff;
+}
+#features {
+    padding: 20px 40px 40px;
+    overflow: auto;
+}
+#features article {
+    width: 47%;
+    margin: 20px 0;
+}
+#features h2 {
+    margin: 0;
+    font-size: 16px;
+}
+#features p {
+    margin: 0 0 .3em;
+}
+#features article:nth-child(odd) {
+    float: left;
+    clear: left;
+}
+#features article:nth-child(even) {
+    float: right;
+    clear: right;
+}
+footer {
+    font-size: .9em;
+    margin-top: 6em;
+    text-align: center;
+    color: #7b7b7b
+}
+footer span {
+    margin-right: .5em
+}
+footer span.made, footer span.heart {
+    padding-top: 1em;
+    display: block;
+    color: #949494;
+    font-size: .9em;
+}
+footer span.heart {
+    color: #b33;
+    opacity: .7
+}
+</style>
+
+<header>
+
+    <h1>CloudTunes</h1>
+
+    <p class="tagline">
+        <span>Collect</span>, <span>discover</span>, <span>stream</span>,
+        <span>share</span>, and
+        <span>tunes</span> from the <span>cloud</span> like a pro.
+    </p>
+
+    <div class="visual">
+        <a href="/auth/facebook"><img src="homepage/cloudtunes.png" alt="CloudTunes web player" /></a>
+    </div>
+
+    <p class="tagline">
+        CloudTunes is a new generation music player built for the cloud.
+    </p>
+
+    <a class="start" href="/auth/facebook">Login with Facebook</a>
+
+</header>
+
+
+<section id="features">
+
+    <article class="dropbox">
+        <h2>Dropbox</h2>
+        <p>
+            Store your music collection in Dropbox and CloudTunes will keep
+            it organized and always accessible via the web from anywhere.
+        </p>
+        <p>
+            <img src="homepage/dropbox.png" alt="Dropbox integration" />
+        </p>
+    </article>
+
+    <article class="youtube">
+        <h2>YouTube</h2>
+        <p>
+            Extend your collection with music videos from YouTube.
+            Browse vast amounts of music on YouTube by artist and album.
+        </p>
+        <p>
+            <img src="homepage/top-tracks.png" alt="YouTube integration">
+        </p>
+    </article>
+
+    <article class="lastfm">
+        <h2>Last.fm</h2>
+        <p>
+            Does it scrobble? Yes it does!
+        </p>
+        <p>
+            <img src="homepage/lastfm.png" alt="Last.fm integration" />
+        </p>
+
+    </article>
+
+</section>
+
+<p>
+    <a class="start" href="/auth/facebook">Login with Facebook</a>
+</p>
+
+
+<footer>
+    <span>
+        Like us on
+        <a href="https://www.facebook.com/cloudtunes" class="fb">Facebook</a>.
+    </span>
+
+    <span>
+        Follow us on
+        <a href="http://twitter.com/cloudtunesapp" class="tw">Twitter</a>.
+    </span>
+
+    <span>
+        Questions send to
+        <a href="mailto:support@cloudtun.es" class="support">support@cloudtun.es</a>.
+    </span>
+
+    <span class="made">Made by SubtleApps in Copenhagen.</span>
+
+    <span class="heart">♥</span>
+
+</footer>

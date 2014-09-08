@@ -1,0 +1,45 @@
+@import 'compass/css3/user-interface'
+
+@import 'compass/css3/user-interface'
+@import 'compass/css3/box-sizing'
+
+@import 'partials/menu'
+@import 'partials/resizers'
+@import 'partials/content'
+@import 'partials/settings'
+@import 'partials/artist'
+@import 'partials/search'
+@import 'partials/layout'
+@import 'partials/sidebar'
+@import 'partials/dialogs'
+@import 'partials/player'
+@import 'partials/lists'
+@import 'partials/playlist'
+
+
+*
+  +box-sizing(border-box)
+
+img
+  user-drag: none
+  -moz-user-select: none
+  -webkit-user-drag: none
+
+body
+  +user-select(none)
+  cursor: default
+  background: $base-color
+  color: $color
+  font-family: sans-serif
+
+body, html
+  overflow: hidden
+
+a
+  color: $color
+  text-decoration: none
+
+.focuscontext.focused
+
+  .selected, tr.selected td
+    background: $focused-item !important

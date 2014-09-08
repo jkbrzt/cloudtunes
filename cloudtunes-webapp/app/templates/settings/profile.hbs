@@ -1,0 +1,33 @@
+<form action="">
+    <p>
+        <a class="button external icon-off" href="/logout">Log out</a>
+    </p>
+    <p class="picture">
+        <span class="label">Picture</span>
+        {{#each services}}
+            <img src="{{this.picture}}" class="{{#if this.selected}}selected{{/if}}" />
+        {{/each}}
+    </p>
+    <p>
+        <label for="acc-name">Name</label>
+        <input name="name" value="{{name}}" id="acc-name"/>
+    </p>
+    <p>
+        <label for="acc-em">Email</label>
+        <input type="email" name="email" value="{{email}}" id="acc-em"/>
+    </p>
+    <p>
+        <label for="_username">Username</label>
+        <input name="username" value="{{username}}" id="_username"/>
+    </p>
+
+    <p>
+        <label for="_location">Location</label>
+        <input name="location" value="{{location}}" id="_location"/>
+    </p>
+
+    <p class="submit">
+        <button>Save</button>
+    </p>
+
+</form>

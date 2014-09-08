@@ -1,0 +1,28 @@
+{
+    "author":"Jakub Roztocil",
+    "name":"cloudtunes-webapp",
+    "description":"Music player built with web technologies.",
+    "version":"0.0.1",
+    "homepage":"https://github.com/jakubroztocil/cloudtunes",
+    "repository":{
+        "type":"git",
+        "url":"git@github.com:jakubroztocil/cloudtunes.git"
+    },
+    "engines":{
+        "node":"~0.6.10 || 0.8 || 0.9"
+    },
+    "scripts":{
+        "start":"brunch watch --server",
+        "test":"brunch test"
+    },
+    "dependencies":{
+        "javascript-brunch":"*",
+        "coffee-script-brunch":"*",
+        "css-brunch":"*",
+        "sass-brunch":"*",
+        "handlebars-brunch":"*",
+        "uglify-js-brunch":"*",
+        "clean-css-brunch":"*"
+    },
+    "devDependencies": {}
+}

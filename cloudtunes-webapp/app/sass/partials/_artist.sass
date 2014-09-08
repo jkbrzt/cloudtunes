@@ -1,0 +1,150 @@
+@import '../variables'
+@import 'compass/utilities/general/clearfix'
+
+$video_height: 150px
+
+#artist
+
+  .video
+    float: left
+    text-align: center
+    width: 160px
+    height: $video_height - 10px
+    cursor: pointer
+    padding: 5px 10px
+    border-radius: 5px
+
+    &:hover, &.playing
+      background: lighten($base-color, 10%)
+
+    &.playing .title:after
+      content: "\f028" // .icon-volume-up
+      font-family: FontAwesome
+      padding-left: .3em
+
+    img
+      width: 120px
+      height: 90px
+
+    .title
+      display: block
+      font-size: .9em
+
+
+  .top-tracks
+
+    +clearfix
+
+    .playable-list
+      width: 100%
+
+
+  .discography
+
+    .album
+
+      h3
+        background: lighten($base-color, 10%)
+        border: 1px solid lighten($border-color, 20%)
+        padding: .3em
+        border-radius: 5px
+
+        &:hover
+          background: lighten($base-color, 5%)
+
+        .meta
+          margin-left: 1em
+          font-size: .7em
+
+      &.playing h3:before
+        content: "\f028" // .icon-volume-up
+        font-family: FontAwesome
+        padding-right: .3em
+
+      h3, h4
+        cursor: pointer
+        font-weight: normal
+
+      .body, .buttons
+        display: none
+
+      &.open .body, &.loaded .buttons
+        display: block
+
+      .tracklist
+        padding-left: .5em
+        padding-bottom: 1em
+
+      .track
+
+        .videos-wrap
+          height: $video_height
+          overflow: auto
+          display: none
+
+          &.open
+            display: block
+
+        .videos
+          width: 100%
+          height: $video_height
+          font-size: .9em
+
+        &.playing h4:after
+          content: "\f028" // .icon-volume-up
+          font-family: FontAwesome
+          padding-left: .5em
+
+
+      .button
+        background: $base-color
+        padding: 2px
+        border-radius: 5px
+        font-size: .7em
+        cursor: pointer
+        text-align: center
+        padding: .3em 1em
+
+.artist-list
+
+  &, li
+    margin: 0
+    padding: 0
+    list-style: none
+
+  li
+    float: left
+    margin: 30px
+
+  li, a, img
+    width: 152px
+    height: 152px
+
+  a
+    position: relative
+    display: block
+    background-color: #ccc
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+  .name
+    font-size: 1.2em
+    text-shadow: 1px 1px rgba(0,0,0,0.5)
+    display: block
+    padding: 5px
+    height: 2.5em
+    position: absolute
+    width: 96%
+    left: 2%
+    bottom: 2%
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    color: #fafafa
+
+    span
+      background: rgba(0, 0, 0, .5)
+      padding: .2em .4em
+      border-radius: .2em
+
