@@ -51,11 +51,12 @@ del handler
 FACEBOOK_APP_ID = None
 FACEBOOK_APP_SECRET = None
 # https://developers.facebook.com/docs/authentication/permissions/
+# We don't really need any permissions ATM.
 FACEBOOK_PERMISSIONS = [
-    'publish_actions',
-    'user_actions.music',
-    'friends_actions.music',
-    'email',
+    # 'publish_actions',
+    # 'user_actions.music',
+    # 'friends_actions.music',
+    # 'email',
 ]
 
 #############################################################

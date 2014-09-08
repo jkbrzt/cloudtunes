@@ -24,8 +24,6 @@ class FacebookHandler(ServiceAuthHandler, tornado.auth.FacebookGraphMixin):
                 client_id=settings.FACEBOOK_APP_ID,
                 client_secret=settings.FACEBOOK_APP_SECRET,
                 code=self.get_argument('code'),
-                extra_fields={
-                    'username'},
                 callback=self._on_login
             )
         else:
@@ -43,6 +41,13 @@ class FacebookHandler(ServiceAuthHandler, tornado.auth.FacebookGraphMixin):
             )
 
     def _on_login(self, fb_data):
+
+        if fb_data:
+            # TODO: drop FB usernames (deprecated for versions v2.0 and higher)
+            # https://github.com/jakubroztocil/cloudtunes/issues/3
+
+            # HACK: work around removed FB usernames
+            fb_data['username'] = fb_data['id']
 
         try:
             user = User.objects.get(facebook__id=fb_data['id'])
