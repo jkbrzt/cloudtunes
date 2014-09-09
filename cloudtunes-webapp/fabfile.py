@@ -42,8 +42,7 @@ def update_html():
     last_commit_rev = local('git rev-parse HEAD', capture=True)
     print(colors.cyan('Updating index.html...', bold=True))
     with open(BUILD_DIR + '/index.html', 'r+w') as f:
-        html = f.read()\
-                .replace('\n<script src="/static/vendor.js"></script>', '')
+        html = f.read()
         html = REV_RE.sub('?' + last_commit_rev, html)
         f.seek(0)
         f.write(html)
