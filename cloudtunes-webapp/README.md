@@ -5,19 +5,21 @@ Built with CoffeeScript, Brunch, Backbone.js, SocketIO,
 SoundManager, Handlebars, Sass, Compass.
 
 
-## Setup
+## Development Setup
 
 ```bash
 $ npm install .
 ```
 
-## Compilation
+You'll also need to install [Compass](http://compass-style.org/install/).
+
+### Compilation
 
 The `.coffee`, `.sass`, and `.hbs`  files need to be compiled 
 before serving them to clients. We use [Brunch](http://brunch.io/) for that.
 
 
-### Production
+#### Production
 
 Compiled & mified production code is included in the repo in 
 `build/production`. To update it after making changes to any of 
@@ -31,7 +33,7 @@ $ brunch build --optimize --config=config-dist.coffee
 Take a look at [`./fabfile.py`](./fabfile.py) 
 for some deployment automation inspiration.
 
-### Development
+#### Development
 
 Non-minified, debug-friendly compilation. Output goes to `build/development`. 
 Start a watcher for on-the-fly compilation for changed files:
