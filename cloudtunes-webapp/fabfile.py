@@ -52,7 +52,7 @@ def update_html():
 def build():
     print(colors.cyan('Compiling...', bold=True))
     local('rm -rf ' + BUILD_DIR)
-    local('brunch build --optimize --config=config-dist.coffee')
+    local('brunch build --production --config=config-dist.coffee')
     update_html()
 
 @task
