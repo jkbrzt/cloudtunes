@@ -17,6 +17,7 @@ CloudTunes uses your files stored in Dropbox and music videos on YouTube.
 
 ![screenshot](screenshots/Explore.png)
 ![screenshot](screenshots/Settings-Social.png)
+![screenshot](screenshots/Homepage.png)
 
 
 
