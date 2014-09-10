@@ -53,19 +53,28 @@ a:hover {
     color: #4a89ff;
 }
 .start {
-    font-size: 17px;
+    text-align: center;
+}
+.start a {
+    font-size: 15px;
     color: #fff !important;
     background: #6f9aff;
     text-decoration: none;
     padding: 10px 30px;
     border-radius: 4px;
     width: 12em;
-    margin: 20px auto;
-    display: block;
+    margin: 5px;
+    display: inline-block;
     text-align: center;
 }
-.start:hover {
+.start a[href*='last'] {
+    background: #d54f45;
+}
+.start a:hover {
     background: #4a89ff;
+}
+.start a[href*='last']:hover {
+    background: #D51007;
 }
 #features {
     padding: 20px 40px 40px;
@@ -129,8 +138,10 @@ footer span.heart {
         CloudTunes is a new generation music player built for the cloud.
     </p>
 
-    <a class="start" href="/auth/facebook">Login with Facebook</a>
-    <a class="start" href="/auth/lastfm">Login with Last.FM</a>
+    <p class="start">
+        <a href="/auth/facebook">Login with Facebook</a>
+        <a href="/auth/lastfm">Login with Last.fm</a>
+    </p>
 
 </header>
 
@@ -172,9 +183,9 @@ footer span.heart {
 
 </section>
 
-<p>
-    <a class="start" href="/auth/facebook">Login with Facebook</a>
-    <a class="start" href="/auth/lastfm">Login with Last.FM</a>
+<p class="start">
+    <a href="/auth/facebook">Login with Facebook</a>
+    <a href="/auth/lastfm">Login with Last.fm</a>
 </p>
 
 
