@@ -26,7 +26,7 @@ Compiled & mified production code is included in the repo in
 the source files, run:
 
 ```bash
-$ brunch build --production --config=config-dist.coffee
+$ brunch build --optimize --config=config-dist.coffee
 ```
 
 
