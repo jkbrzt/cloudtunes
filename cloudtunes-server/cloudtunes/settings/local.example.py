@@ -22,7 +22,7 @@ WEB_APP_DIR = path.realpath(ROOT + '/../cloudtunes-webapp/build/production')
 TORNADO_APP.update({
     'static_path': WEB_APP_DIR,
     'debug': DEBUG,
-    'cookie_secret': None
+    'cookie_secret': 'PLEASECHANGETHIS'
 })
 
 
