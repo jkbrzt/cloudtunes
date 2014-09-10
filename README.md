@@ -3,7 +3,7 @@
 **Open source, web-based music player for the cloud.**   [[hn](https://news.ycombinator.com/item?id=8284785 "Hacker News discussion")]
 
 
-![screenshot](screenshots/Collection.png)
+![screenshot](screenshots/Homepage.png)
 
 
 CloudTunes provides a unified interface 
@@ -15,10 +15,9 @@ except instead of local tracks and the fixed Spotify catalog,
 CloudTunes uses your files stored in Dropbox and music videos on YouTube.
 
 
+![screenshot](screenshots/Collection.png)
 ![screenshot](screenshots/Explore.png)
 ![screenshot](screenshots/Settings-Social.png)
-![screenshot](screenshots/Homepage.png)
-
 
 
 ## The Story
