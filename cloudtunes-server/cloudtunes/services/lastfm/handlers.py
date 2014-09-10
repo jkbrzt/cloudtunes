@@ -39,9 +39,14 @@ class LastfmAuthHandler(ServiceAuthHandler):
             user.lastfm.session_key = session['key']
             profile['subscriber'] = bool(int(profile['subscriber']))
             user.lastfm.update_fields(**profile)
+
             if not user.picture:
                 # noinspection PyUnresolvedReferences
                 user.picture = user.lastfm.get_picture()
+
+            if not user.username:
+                user.username = user.lastfm.name
+
             user.save()
 
             self.service_connected(user)
