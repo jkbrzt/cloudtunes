@@ -118,13 +118,21 @@ Scrobble and play your personalised recommendations.
 
 
 ## Installation
-Clone this repository:
 
-```bash
-$ git clone git@github.com:jakubroztocil/cloudtunes.git
-$ cd cloudtunes
-```
+1. Clone this repository:
 
+  ```bash
+  $ git clone git@github.com:jakubroztocil/cloudtunes.git
+  $ cd cloudtunes
+  ```
+
+2. Use [`cloudtunes/settings/local.example.py`](cloudtunes/settings/local.example.py) as a template and fill in the `None`'s:
+
+  ```bash
+  $ cp  cloudtunes/settings/local.example.py cloudtunes/settings/local.py
+  $ vim cloudtunes/settings/local.py
+  ```
+3. Decide wether to continue with or without Docker and follow the specific instructions bellow.
 
 ### Without Docker
 
@@ -136,16 +144,19 @@ Continue by following the instructions in:
 ### With Docker
 
 The easiest way to run CloudTunes is in an isolated 
-[Docker](https://docker.com/) container. Like this, the only thing you need 
-to install on your system directly is Docker (or `boot2docker`) itself.
+[Docker](https://docker.com/whatisdocker/) container. Like this, 
+the only thing you need to install directly on your system is Docker 
+(or `boot2docker`) itself.
 
 Please follow the 
 [installation instructions](https://docs.docker.com/installation/#installation) 
-on how to install Docker (or `boot2docker`) on your system.
+on how to install Docker (or `boot2docker`) on your system. Then follow the
+steps bellow:
 
 
-1.  **Build** a Docker image according to [`Dockerfile`](Dockerfile) and named `cloudtunes-img`. This will take a long time 
-when run for the first time:
+1.  **Build** a Docker image according to our [`Dockerfile`](Dockerfile) 
+  and name it `cloudtunes-img`. This takes a long time the first time
+  it's run:
 
   ```bash
   $ docker build --tag=cloudtunes-img .
@@ -190,24 +201,25 @@ To stop the app (Docker container), run:
 ```bash
 $ docker stop cloudtunes
 ```
+
 To start it again, run:
 ```bash
 $ docker start cloudtunes
 ```
 
-All data will persist until you delete the container.	
-	
-If you make any changes to the codebase or configuration, or simply 
-want to start from scratch, run the following commands to delete the 
-existing container (this will also delete all user data in it):
+All user data (stored by MongoDB and Redis under `/data`) will persist until the container has been deleted.	
+
+After you have made any changes to the codebase or configuration and 
+want them to be applied to the container, or simply wish to start 
+from scratch again, run the following commands to delete the 
+existing container (*this will also delete all user data in it*):
 
 ```bash
 $ docker stop cloudtunes
 $ docker rm cloudtunes
 ```
 
-And then start again from step 1.
-
+And then start again from step 1. above (it should go much faster this time).
 
 
 
