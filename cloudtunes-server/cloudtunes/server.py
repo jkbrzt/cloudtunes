@@ -93,6 +93,7 @@ handlers = realtime.router.urls + [
 
 app = Application(
     handlers=handlers,
+    socket_io_address='0.0.0.0',
     **settings.TORNADO_APP
 )
 

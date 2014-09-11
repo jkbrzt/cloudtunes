@@ -118,11 +118,80 @@ Scrobble and play your personalised recommendations.
 
 
 ## Installation
+Clone this repository:
 
-Clone this repo and follow instructions in:
+```bash
+$ git clone git@github.com:jakubroztocil/cloudtunes.git
+$ cd cloudtunes
+```
+
+
+### Without Docker
+
+Continue by follow the instructions in:
 
 * [`cloudtunes-server/README`](cloudtunes-server)
 * [`cloudtunes-webapp/README`](cloudtunes-webapp)
+
+### With Docker
+
+The easiest way to run CloudTunes is in an isolated [Docker](https://docker.com/) container. Like this, the only thing you need to install on your system directly is Docker (or `boot2docker`) itself.
+
+Please follow the [installation instructions](](https://docs.docker.com/installation/#installation) ) on how to install Docker (or `boot2docker`) on your system.
+
+1.  **Build** a Docker image according to [`Dockerfile`](Dockerfile) and named `cloudtunes-img`. This will take a long time 
+when run for the first time:
+
+	```bash
+	$ docker build --tag=cloudtunes-img .
+	```
+1. **Verify** the image been created:
+
+	```bash
+	$ docker images
+	REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+	cloudtunes-img      latest              e1bcb48ab148        About an hour ago   995.1 MB
+	```
+
+1. **Create** a new container named `cloudtunes ` from the `cloudtunes-img` image and run the app in it:
+``` bash
+$ docker run --name=cloudtunes --publish=8000:8000  --detach --tty cloudtunes-img
+```
+
+1. **Verify** the container is running:
+
+	```bash
+	$ docker ps
+	CONTAINER ID        IMAGE                   COMMAND                CREATED             STATUS              PORTS                    NAMES
+	564cc245e6dd        cloudtunes-img:latest   "supervisord --nodae   52 minutes ago      Up 2 minutes        0.0.0.0:8000->8000/tcp   cloudtunes
+
+	```
+	
+
+1. Now CloudTunes should be running in the Docker container on port `8000`. The full URL depends on the method you used to install Docker:
+	* If you have installed **Docker directly** on your system, the full URL will simply be: [`http://localhost:8000/`](http://localhost:8000/)
+	* If you have used **`boot2docker`,** then run `$ boot2docker ip` to find out the IP address under which the app is available, and the full URL will be `http://<boot2docker IP>:8000/`
+
+1. To stop the app (Docker container), run:
+	```bash
+	$ docker stop cloudtunes
+	```
+	To start it again, run:
+	```bash
+	$ docker start cloudtunes
+	```
+	All data will persist until you delete the container.
+	
+	
+1. If you make any changes to the codebase or configuration, or simply want to start from scratch, run the following commands to delete the existing container (this will also delete all user data in it):
+	```bash
+	$ docker stop cloudtunes
+	$ docker rm cloudtunes
+	```
+
+	And then start again from step 1.
+
+
 
 
 ## Licence
@@ -134,5 +203,5 @@ BSD. See [LICENCE](LICENCE) for more details.
 
 Jakub Roztočil
 
-* http://github.com/jakubroztocil
-* http://twitter.com/jakubroztocil
+* [https://github.com/jakubroztocil](https://github.com/jakubroztocil)
+* [https://twitter.com/jakubroztocil](https://twitter.com/jakubroztocil)
