@@ -128,7 +128,7 @@ $ cd cloudtunes
 
 ### Without Docker
 
-Continue by follow the instructions in:
+Continue by following the instructions in:
 
 * [`cloudtunes-server/README`](cloudtunes-server)
 * [`cloudtunes-webapp/README`](cloudtunes-webapp)
