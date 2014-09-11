@@ -126,13 +126,13 @@ Scrobble and play your personalised recommendations.
   $ cd cloudtunes
   ```
 
-2. Use [`cloudtunes/settings/local.example.py`](cloudtunes/settings/local.example.py) as a template and fill in the `None`'s:
+2. Use [`cloudtunes-server/cloudtunes/settings/local.example.py`](cloudtunes-server/cloudtunes/settings/local.example.py) as a template and fill in the `None`'s:
 
   ```bash
-  $ cp  cloudtunes/settings/local.example.py cloudtunes/settings/local.py
-  $ vim cloudtunes/settings/local.py
+  $ cp  cloudtunes-server/cloudtunes/settings/local.example.py cloudtunes-server/cloudtunes/settings/local.py
+  $ vim cloudtunes-server/cloudtunes/settings/local.py
   ```
-3. Decide wether to continue with or without Docker and follow the specific instructions bellow.
+3. Decide whether to continue with or without Docker and follow the specific instructions bellow.
 
 ### Without Docker
 
