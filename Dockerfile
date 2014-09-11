@@ -54,6 +54,7 @@ ADD cloudtunes-server/production/supervisor.ini \
 ADD cloudtunes-webapp /home/cloudtunes/cloudtunes-webapp
 RUN npm install ./cloudtunes-webapp
 RUN cd cloudtunes-webapp \
+    && npm install \
     && brunch build --production --config=config-dist.coffee
 
 
