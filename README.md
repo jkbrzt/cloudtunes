@@ -1,6 +1,10 @@
 # CloudTunes
 
-**Open source, web-based music player for the cloud.**   [[hn](https://news.ycombinator.com/item?id=8284785 "Hacker News discussion")]
+**Open source, web-based music player for the cloud.** 
+<br/>
+[Facebook](https://www.facebook.com/cloudtunes "/cloudtunes") •
+[Twitter](https://twitter.com/cloudtunesapp "@cloudtunesapp") •
+[Hacker News](https://news.ycombinator.com/item?id=8284785 "Hacker News discussion")
 
 
 ![screenshot](screenshots/Homepage.png)
