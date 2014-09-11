@@ -5,10 +5,12 @@ http://musicbrainz.org/doc/MusicBrainz_Database/Schema
 from io import BytesIO
 import json
 from urllib import urlencode
+import logging
 
 from tornado.gen import coroutine, Task, Return
-from tornado.httpclient import AsyncHTTPClient
+from tornado.httpclient import AsyncHTTPClient, HTTPError
 from musicbrainzngs import mbxml
+from tornado.ioloop import IOLoop
 
 from cloudtunes import async
 
@@ -27,7 +29,7 @@ class MusicbrainzClient(object):
         return mbxml.parse_message(BytesIO(body))
 
     @coroutine
-    def fetch(self, url, method):
+    def fetch(self, url, method, max_retries=5):
         assert method == 'GET'
 
         data = None
@@ -39,7 +41,29 @@ class MusicbrainzClient(object):
                 data = json.loads(response)
 
         if not data:
-            response = yield self.http.fetch(url, method=method)
+            failures = 0
+            while True:
+                try:
+                    response = yield self.http.fetch(url, method=method)
+                    break
+                except HTTPError as e:
+                    if e.code == 503:
+                        failures += 1
+                        if failures < max_retries:
+                            seconds_to_sleep = failures * 2
+                            logging.warning(
+                                'Musicbrainz service unavailable: '
+                                'max_retries=%d, failures=%s,'
+                                ' seconds_to_sleep=%d',
+                                max_retries, failures, seconds_to_sleep,
+                            )
+                            yield Task(
+                                IOLoop.instance().add_timeout,
+                                IOLoop.instance().time() + seconds_to_sleep
+                            )
+                            continue
+                    raise
+
             if response.error is not None:
                 response.rethrow()
             data = self.parse_response_body(response.body)
