@@ -26,7 +26,11 @@ class LastfmAccount(ServiceAccount):
 
         for img in self['image']:
             if img['size'] == 'medium':
-                return img['#text']
+                tmpimg = img['#text']
+                if tmpimg == '':
+                    tmpimg = 'http://cdn.last.fm/flatness/responsive/2/noimage/default_user_60_g1.png'
+                    return tmpimg
 
     def get_url(self):
         return self.url
+
