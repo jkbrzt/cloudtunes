@@ -157,7 +157,15 @@ on how to install Docker (or `boot2docker`) on your system. Then follow the
 steps bellow:
 
 
-1.  **Build** a Docker image according to our [`Dockerfile`](Dockerfile) 
+1.  Copy the `local.example.py` file in `cloudtunes-server/settings/` directory, changing the `NONE`s 
+    for your API keys for [Facebook](https://developers.facebook.com/apps) and/or [Last.fm](http://www.last.fm/api/account), and [Dropbox](https://www.dropbox.com/developers) (optional)
+
+    ```bash
+    cp cloudtunes-server/cloudtunes/settings/local.example.py cloudtunes-server/cloudtunes/settings/local.py
+    vi cloudtunes-server/cloudtunes/settings/local.py
+    ````
+
+2.  **Build** a Docker image according to our [`Dockerfile`](Dockerfile) 
   and name it `cloudtunes-img`. This takes a long time the first time
   it's run:
 
@@ -165,7 +173,7 @@ steps bellow:
   $ docker build --tag=cloudtunes-img .
   ```
 
-2. **Verify** the image has been created:
+3. **Verify** the image has been created:
 
   ```bash
   $ docker images
@@ -173,14 +181,14 @@ steps bellow:
   cloudtunes-img      latest              e1bcb48ab148        About an hour ago   995.1 MB
   ```
 
-3. **Create** a new container named `cloudtunes ` from the `cloudtunes-img` 
+4. **Create** a new container named `cloudtunes ` from the `cloudtunes-img` 
   image and run the app in it:
 
   ``` bash
   $ docker run --name=cloudtunes --publish=8000:8000  --detach --tty cloudtunes-img
   ```
 
-4. **Verify** the container is running:
+5. **Verify** the container is running:
 
   ```bash
   $ docker ps
@@ -188,8 +196,8 @@ steps bellow:
   564cc245e6dd        cloudtunes-img:latest   "supervisord --nodae   52 minutes ago      Up 2 minutes        0.0.0.0:8000->8000/tcp   cloudtunes
   
   ```
-	
-5. Now CloudTunes should be running in the Docker container on port `8000`. 
+  
+6. Now CloudTunes should be running in the Docker container on port `8000`. 
   The full URL depends on the method you used to install Docker:
 
   * If you have installed **Docker directly** on your system, the full 
@@ -210,7 +218,7 @@ To start it again, run:
 $ docker start cloudtunes
 ```
 
-All user data (stored by MongoDB and Redis under `/data`) will persist until the container has been deleted.	
+All user data (stored by MongoDB and Redis under `/data`) will persist until the container has been deleted.  
 
 After you have made any changes to the codebase or configuration and 
 want them to be applied to the container, or simply wish to start 
