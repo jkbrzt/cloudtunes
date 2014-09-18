@@ -1,4 +1,5 @@
 dump.rdb
 .idea/
 *.pyc
-
+# Make sure people dont accidentally commit their API keys!
+cloudtunes-server/cloudtunes/settings/local.py
