@@ -157,15 +157,7 @@ on how to install Docker (or `boot2docker`) on your system. Then follow the
 steps bellow:
 
 
-1.  Copy the `local.example.py` file in `cloudtunes-server/settings/` directory, changing the `NONE`s 
-    for your API keys for [Facebook](https://developers.facebook.com/apps) and/or [Last.fm](http://www.last.fm/api/account), and [Dropbox](https://www.dropbox.com/developers) (optional)
-
-    ```bash
-    cp cloudtunes-server/cloudtunes/settings/local.example.py cloudtunes-server/cloudtunes/settings/local.py
-    vi cloudtunes-server/cloudtunes/settings/local.py
-    ````
-
-2.  **Build** a Docker image according to our [`Dockerfile`](Dockerfile) 
+1.  **Build** a Docker image according to our [`Dockerfile`](Dockerfile) 
   and name it `cloudtunes-img`. This takes a long time the first time
   it's run:
 
@@ -173,7 +165,7 @@ steps bellow:
   $ docker build --tag=cloudtunes-img .
   ```
 
-3. **Verify** the image has been created:
+2. **Verify** the image has been created:
 
   ```bash
   $ docker images
@@ -181,14 +173,14 @@ steps bellow:
   cloudtunes-img      latest              e1bcb48ab148        About an hour ago   995.1 MB
   ```
 
-4. **Create** a new container named `cloudtunes ` from the `cloudtunes-img` 
+3. **Create** a new container named `cloudtunes ` from the `cloudtunes-img` 
   image and run the app in it:
 
   ``` bash
   $ docker run --name=cloudtunes --publish=8000:8000  --detach --tty cloudtunes-img
   ```
 
-5. **Verify** the container is running:
+4. **Verify** the container is running:
 
   ```bash
   $ docker ps
@@ -197,7 +189,7 @@ steps bellow:
   
   ```
   
-6. Now CloudTunes should be running in the Docker container on port `8000`. 
+5. Now CloudTunes should be running in the Docker container on port `8000`. 
   The full URL depends on the method you used to install Docker:
 
   * If you have installed **Docker directly** on your system, the full 
@@ -232,12 +224,9 @@ $ docker rm cloudtunes
 
 And then start again from step 1. above (it should go much faster this time).
 
-
-
 ## Licence
 
 BSD. See [LICENCE](LICENCE) for more details.
-
 
 ## Contact 
 
