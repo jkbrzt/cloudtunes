@@ -8,7 +8,7 @@ Built with Python, Mongo DB, MongoEngine, Redis, Tornado, Celery, SocketIO, torn
 ## Setup
 
 
-* Copy [`cloudtunes/settings/local.example.py`](cloudtunes/settings/local.example.py) 
+* Copy [`cloudtunes/settings/local.example.py`](cloudtunes/settings/local.example.py)
   to `cloudtunes/settings/local.py` and fill in the `None`'s.
 * Install and start Mongo DB and Redis.
 
@@ -18,7 +18,7 @@ Built with Python, Mongo DB, MongoEngine, Redis, Tornado, Celery, SocketIO, torn
 
 ```bash
 # Install cloudtunes-server
-$ pip install -r requirements
+$ pip install -r requirements.txt
 $ pip install -e .
 
 # Run
@@ -32,5 +32,5 @@ $ cloudtunes-server
 
 ### Production
 
-Take a look at [`./fabfile.py`](./fabfile.py) 
+Take a look at [`./fabfile.py`](./fabfile.py)
 and [`./production/*`](./production) for inspiration.
