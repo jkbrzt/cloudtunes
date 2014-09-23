@@ -188,7 +188,7 @@ steps bellow:
   564cc245e6dd        cloudtunes-img:latest   "supervisord --nodae   52 minutes ago      Up 2 minutes        0.0.0.0:8000->8000/tcp   cloudtunes
   
   ```
-	
+  
 5. Now CloudTunes should be running in the Docker container on port `8000`. 
   The full URL depends on the method you used to install Docker:
 
@@ -210,7 +210,7 @@ To start it again, run:
 $ docker start cloudtunes
 ```
 
-All user data (stored by MongoDB and Redis under `/data`) will persist until the container has been deleted.	
+All user data (stored by MongoDB and Redis under `/data`) will persist until the container has been deleted.  
 
 After you have made any changes to the codebase or configuration and 
 want them to be applied to the container, or simply wish to start 
@@ -224,12 +224,9 @@ $ docker rm cloudtunes
 
 And then start again from step 1. above (it should go much faster this time).
 
-
-
 ## Licence
 
 BSD. See [LICENCE](LICENCE) for more details.
-
 
 ## Contact 
 

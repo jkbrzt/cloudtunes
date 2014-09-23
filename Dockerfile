@@ -63,6 +63,11 @@ RUN groupadd -r cloudtunes -g 433 \
                -s /usr/sbin/nologin -c "Docker image user" cloudtunes \
     && chown -R cloudtunes:cloudtunes /home/cloudtunes
 
+### Config API keys ###
+
+# Use add, so we can make sure that the file gets cached, and we can check if it's changed since the image was built
+ADD cloudtunes-server/cloudtunes/settings/local.py /home/cloudtunes/cloudtunes-server/cloudtunes/settings/local.py
+
 ### Launch ###
 
 # https://docs.docker.com/articles/using_supervisord/
