@@ -224,9 +224,9 @@ $ docker rm cloudtunes
 
 And then start again from step 1. above (it should go much faster this time).
 
-## Licence
+## License
 
-BSD. See [LICENCE](LICENCE) for more details.
+BSD. See [LICENSE](LICENSE) for more details.
 
 ## Contact 
 
