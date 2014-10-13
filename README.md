@@ -125,7 +125,7 @@ Scrobble and play your personalised recommendations.
 1. Clone this repository:
 
   ```bash
-  $ git clone git@github.com:jakubroztocil/cloudtunes.git
+  $ git clone https://github.com/jakubroztocil/cloudtunes.git
   $ cd cloudtunes
   ```
 
