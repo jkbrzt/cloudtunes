@@ -1,4 +1,4 @@
-{Model, Collection} = require 'mvc'
+{Model} = require 'mvc'
 pubsub = require 'pubsub'
 
 {DROPBOX, YOUTUBE} = require 'source_ids'
