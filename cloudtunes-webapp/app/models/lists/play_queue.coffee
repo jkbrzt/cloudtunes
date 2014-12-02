@@ -1,8 +1,5 @@
 Backbone = require 'backbone'
 _ = require 'underscore'
-{NullOrdering} = require 'models/lists/states'
-TrackList = require 'models/lists/tracklist'
-
 
 class PlayQueue
 
