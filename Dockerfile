@@ -23,6 +23,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 \
 VOLUME ["/data"]
 
 # Add nodejs repository and install required packages
+RUN apt-get -y curl
 RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
 
 # Install system dependencies
@@ -54,7 +55,7 @@ ADD cloudtunes-server/production/supervisor.ini \
 ADD cloudtunes-webapp /home/cloudtunes/cloudtunes-webapp
 RUN cd cloudtunes-webapp \
     && npm install \
-    && brunch build --production --config=config-dist.coffee
+    && brunch b --env config-dist.coffee
 
 
 ### User ###
