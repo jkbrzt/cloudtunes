@@ -232,5 +232,5 @@ BSD. See [LICENSE](LICENSE) for more details.
 
 Jakub Roztočil
 
-* [https://github.com/jakubroztocil](https://github.com/jakubroztocil)
-* [https://twitter.com/jakubroztocil](https://twitter.com/jakubroztocil)
+* [https://github.com/jkbrzt](https://github.com/jkbrzt)
+* [https://twitter.com/jkbrzt](https://twitter.com/jkbrzt)
