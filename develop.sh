@@ -4,7 +4,7 @@ pip install -e ./cloudtunes-server
 
 
 # Get the `iterm-multiple' command at:
-# <https://gist.github.com/jakubroztocil/6018903>
+# <https://gist.github.com/jkbrzt/6018903>
 iterm-multiple \
     "mongod run --config /usr/local/etc/mongod.conf -vvv & tail -f /usr/local/var/log/mongodb/mongo.log | grep --color cloudtunes" \
     "killall redis-server; sleep 2; redis-server" \

@@ -13,7 +13,7 @@ env.hosts = ['cloudtun.es']
 env.user = 'cloudtunes'
 env.key_filename = '~/.ssh/id_dsa'
 
-GITHUB = 'git@github.com:jakubroztocil/cloudtunes.git'
+GITHUB = 'git@github.com:jkbrzt/cloudtunes.git'
 
 ROOT = '~'
 CODE_ROOT = '%s/cloudtunes-webapp' % ROOT
