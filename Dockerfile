@@ -23,7 +23,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 \
 VOLUME ["/data"]
 
 # Add nodejs repository and install required packages
-RUN apt-get -y curl
+RUN apt-get -y install curl
 RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
 
 # Install system dependencies
