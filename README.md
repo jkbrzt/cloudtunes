@@ -28,19 +28,19 @@ CloudTunes uses your files stored in Dropbox and music videos on YouTube.
 CloudTunes is a side project of 
 [@jkbrzt](https://twitter.com/jkbrzt) who is a bit of a 
 [music nerd](http://last.fm/user/oswaldcz) and who likes to 
-[build stuff](https://github.com/jkbrzt).  In 2012 he decided 
+[build stuff](https://github.com/jkbrzt). In 2012 he decided 
 to create an iTunes-like webapp to **make music stored all over the cloud 
 easily discoverable and accessible:** hence *CloudTunes*. 
 
-One of the goals was to experiment with a bunch of new technologies as well.
-Later the side-project has been largely abandoned due to other more pressing 
-projects. In the autumn of 2014 CloudTunes has been open-sourced *"as is"* 
+Another one of the goals was to experiment with a bunch of new technologies.
+Later, this side-project was largely abandoned due to other more pressing 
+projects. In the autumn of 2014, CloudTunes was open-sourced *"as is"* 
 (i.e. alpha quality, lack of polish, tests and docs).
 
 
 ## Technology
 
-The architecture consist of a server and client component. Those two are 
+The architecture consists of a server and client component. Those two are 
 decoupled and communicate via a JSON REST API and a WebSocket connection:
 
 
@@ -135,7 +135,7 @@ Scrobble and play your personalised recommendations.
   $ cp  cloudtunes-server/cloudtunes/settings/local.example.py cloudtunes-server/cloudtunes/settings/local.py
   $ vim cloudtunes-server/cloudtunes/settings/local.py
   ```
-3. Decide whether to continue with or without Docker and follow the specific instructions bellow.
+3. Decide whether to continue with or without Docker and follow the specific instructions below.
 
 ### Without Docker
 
@@ -165,7 +165,7 @@ steps bellow:
   $ docker build --tag=cloudtunes-img .
   ```
 
-2. **Verify** the image has been created:
+2. **Verify** that the image has been created:
 
   ```bash
   $ docker images
@@ -213,7 +213,7 @@ $ docker start cloudtunes
 All user data (stored by MongoDB and Redis under `/data`) will persist until the container has been deleted.  
 
 After you have made any changes to the codebase or configuration and 
-want them to be applied to the container, or simply wish to start 
+want them to be applied to the container, or if you simply wish to start 
 from scratch again, run the following commands to delete the 
 existing container (*this will also delete all user data in it*):
 
