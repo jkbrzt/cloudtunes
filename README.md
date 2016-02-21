@@ -4,7 +4,8 @@
 <br/>
 Also on: [Facebook](https://www.facebook.com/cloudtunes "/cloudtunes") •
 [Twitter](https://twitter.com/cloudtunesapp "@cloudtunesapp") •
-[Hacker News](https://news.ycombinator.com/item?id=8284785 "Hacker News discussion")
+[Hacker News](https://news.ycombinator.com/item?id=8284785 "Hacker News discussion") •
+[Lifehacker](http://lifehacker.com/cloudtunes-is-an-elegant-music-player-for-all-your-drop-1633003677)
 
 ![screenshot](screenshots/Homepage.png)
 
