@@ -11,24 +11,13 @@ ENV PATH "$PATH:/usr/bin"
 
 ### Setup system ###
 
-# Install mongodb from ppa
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 \
-    && echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' \
-        | tee /etc/apt/sources.list.d/mongodb.list \
-    && apt-get -y update \
-    && apt-get -y install mongodb-org \
-    && mkdir -p /data/db
-
-# Mongo DB and Redis will store their data in /data; make it a VOLUME.
-VOLUME ["/data"]
-
 # Add nodejs repository and install required packages
 RUN apt-get -y install curl
 RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
 
 # Install system dependencies
 RUN apt-get -y update
-RUN apt-get -y install redis-server supervisor nginx python-dev python-pip \
+RUN apt-get -y install supervisor nginx python-dev python-pip \
                git ruby python-software-properties python g++ make nodejs \
                build-essential ruby-dev
 
