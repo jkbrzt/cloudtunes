@@ -11,7 +11,7 @@ except ImportError:
 You need to copy cloudtunes/settings/local.example.py
 to cloudtunes/settings/local.py and fill in the None's.
 
-https://github.com/jkbrzt/cloudtunes#installation
+https://github.com/jakubroztocil/cloudtunes#installation
 
 
 """)

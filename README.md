@@ -27,9 +27,9 @@ CloudTunes uses your files stored in Dropbox and music videos on YouTube.
 ## The Story
 
 CloudTunes is a side project of 
-[@jkbrzt](https://twitter.com/jkbrzt) who is a bit of a 
+[@jakubroztocil](https://twitter.com/jakubroztocil) who is a bit of a 
 [music nerd](http://last.fm/user/oswaldcz) and who likes to 
-[build stuff](https://github.com/jkbrzt). In 2012 he decided 
+[build stuff](https://github.com/jakubroztocil). In 2012 he decided 
 to create an iTunes-like webapp to **make music stored all over the cloud 
 easily discoverable and accessible:** hence *CloudTunes*. 
 
@@ -126,7 +126,7 @@ Scrobble and play your personalised recommendations.
 1. Clone this repository:
 
   ```bash
-  $ git clone https://github.com/jkbrzt/cloudtunes.git
+  $ git clone https://github.com/jakubroztocil/cloudtunes.git
   $ cd cloudtunes
   ```
 
@@ -233,5 +233,5 @@ BSD. See [LICENSE](LICENSE) for more details.
 
 Jakub Roztočil
 
-* [https://github.com/jkbrzt](https://github.com/jkbrzt)
-* [https://twitter.com/jkbrzt](https://twitter.com/jkbrzt)
+* [https://github.com/jakubroztocil](https://github.com/jakubroztocil)
+* [https://twitter.com/jakubroztocil](https://twitter.com/jakubroztocil)
