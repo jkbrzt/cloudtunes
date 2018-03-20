@@ -44,7 +44,7 @@ class FacebookHandler(ServiceAuthHandler, tornado.auth.FacebookGraphMixin):
 
         if fb_data:
             # TODO: drop FB usernames (deprecated for versions v2.0 and higher)
-            # https://github.com/jkbrzt/cloudtunes/issues/3
+            # https://github.com/jakubroztocil/cloudtunes/issues/3
 
             # HACK: work around removed FB usernames
             fb_data['username'] = fb_data['id']

@@ -11,7 +11,7 @@ env.user = 'cloudtunes'
 env.key_filename = '~/.ssh/id_dsa'
 
 
-GITHUB = 'git@github.com:jkbrzt/cloudtunes.git'
+GITHUB = 'git@github.com:jakubroztocil/cloudtunes.git'
 ROOT = '~'
 CODE_ROOT = '%s/cloudtunes' % ROOT
 VIRTUALENV = '%s/virtualenv' % ROOT

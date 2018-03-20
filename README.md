@@ -26,12 +26,12 @@ CloudTunes uses your files stored in Dropbox and music videos on YouTube.
 
 ## The Story
 
-CloudTunes is a side project of
-[@jkbrzt](https://twitter.com/jkbrzt) who is a bit of a
-[music nerd](http://last.fm/user/oswaldcz) and who likes to
-[build stuff](https://github.com/jkbrzt). In 2012 he decided
-to create an iTunes-like webapp to **make music stored all over the cloud
-easily discoverable and accessible:** hence *CloudTunes*.
+CloudTunes is a side project of 
+[@jakubroztocil](https://twitter.com/jakubroztocil) who is a bit of a 
+[music nerd](http://last.fm/user/oswaldcz) and who likes to 
+[build stuff](https://github.com/jakubroztocil). In 2012 he decided 
+to create an iTunes-like webapp to **make music stored all over the cloud 
+easily discoverable and accessible:** hence *CloudTunes*. 
 
 Another one of the goals was to experiment with a bunch of new technologies.
 Later, this side-project was largely abandoned due to other more pressing
@@ -187,7 +187,6 @@ $ docker stop {cloudtunes, cloudtunes-mongo, cloudtunes-redis}
 $ docker rm {cloudtunes, cloudtunes-mongo, cloudtunes-redis}
 $ docker volume rm {cloudtunes-mongo-data, cloudtunes-redis-data}
 ```
-
 And then start again from step 1. above (it should go much faster this time).
 
 ## License
@@ -198,5 +197,5 @@ BSD. See [LICENSE](LICENSE) for more details.
 
 Jakub Roztočil
 
-* [https://github.com/jkbrzt](https://github.com/jkbrzt)
-* [https://twitter.com/jkbrzt](https://twitter.com/jkbrzt)
+* [https://github.com/jakubroztocil](https://github.com/jakubroztocil)
+* [https://twitter.com/jakubroztocil](https://twitter.com/jakubroztocil)
